@@ -17,61 +17,62 @@
 </head>
 
 <body>
+  <!--Menu Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar" href="index.html">
+      <img src="img/logoplanta.png" alt="logoplanta" id="logo-pagina">
+    </a>
+    <div class="text-success" id="titulo-principal">
+      <h2>GreenLife</h2>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+      </span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-dark" href="index.html" id="textos-barra">Inicio
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">Quienes somos</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Catalogo
+          </a>
+
+          <!--Submenu-->
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul id="submenu">
+              <li><a href="./maceteros.html" class="items-menu">Maceteros</a></li>
+              <li><a href="#" class="items-menu">Insumos</a></li>
+
+            </ul>
+          </div>
+
+        </li>
+      </ul>
+
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Que estas buscando?" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+  <!--CONTENEDOR DE TODA LA PAGINA-->
   <div class="container" style="height: 100%;">
     <div class="row">
       <div class="col-sm-1" id="barra-izquierda">
       </div>
       <div class="col-sm-12" style="background-color:rgb(253, 253, 253) ;" id="barra-central">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar" href="index.html">
-            <img src="img/logoplanta.png" alt="logoplanta" id="logo-pagina">
-          </a>
-          <div class="text-success" id="titulo-principal">
-            <h2>GreenLife</h2>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-            </span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-            <!--Menu Navbar-->
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link text-dark" href="index.html" id="textos-barra">Inicio
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-dark" href="#">Quienes somos</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                  Catalogo
-                </a>
-
-                <!--Submenu-->
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <ul id="submenu">
-                    <li><a href="./maceteros.html" class="items-menu">Maceteros</a></li>
-                    <li><a href="#" class="items-menu">Insumos</a></li>
-
-                  </ul>
-                </div>
-
-              </li>
-            </ul>
-
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Que estas buscando?" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
-          </div>
-        </nav>
-
         <!--Carrusel responsivo-->
 
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -143,7 +144,8 @@
                   <h5 class="card-title text-center">
                     <img id="img_obs" src="./img/tierra1.jpg">
                   </h5>
-                  <p class="card-text"><label id="desayuno">Tierra biologica</label><br>Marca: ANASAC<br>Cantidad Disp: 5<br>
+                  <p class="card-text"><label id="desayuno">Tierra biologica</label><br>Marca: ANASAC<br>Cantidad Disp:
+                    5<br>
                     Precio: $5000</p>
                   <!--editar-->
                   <p class="collapse" id="collapseExample2">
@@ -168,11 +170,13 @@
                   <h5 class="card-title text-center">
                     <img id="img_obs" src="./img/semillas1.jpg">
                   </h5>
-                  <p class="card-text"><label id="desayuno">Semilla Tagette</label><br>Marca: ANASAC<br>Cantidad Disp: 10<br>
+                  <p class="card-text"><label id="desayuno">Semilla Tagette</label><br>Marca: ANASAC<br>Cantidad Disp:
+                    10<br>
                     Precio: $2000</p>
                   <!--editar-->
                   <p class="collapse" id="collapseExample3">
-                    Planta anual, de fácil cultivo de flores dobles con un brillante color naranjo y de bajo crecimiento. Se utiliza principalmente como planta herbácea para macetas y jardineras.
+                    Planta anual, de fácil cultivo de flores dobles con un brillante color naranjo y de bajo
+                    crecimiento. Se utiliza principalmente como planta herbácea para macetas y jardineras.
                   </p>
                   <p class="card-text text-right">
                     <!--editar-->
