@@ -8,6 +8,7 @@ title{
     height: 70px;
     width: 70px;    
 }
+
 #textos-barra{
     text-align: 10%;
 }
@@ -44,8 +45,11 @@ nav li:hover{
     text-align: center;
 }
 
-
-
+#img_obs{
+	height: 170px;
+    width: 100%;
+    object-fit: contain;
+}
 
 
 
