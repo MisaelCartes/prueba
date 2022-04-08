@@ -19,8 +19,8 @@ title{
 #barra-secundaria{
     background-color:rgba(15, 241, 34, 0.938) ; 
     padding-top: 10px;
-    border: 1px  ;
-    border-radius: 7px;
+    border: 5px  ;
+    border-radius: 1px;
 }
 #demo{
     padding-bottom: 10px;
