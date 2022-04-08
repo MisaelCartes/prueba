@@ -182,5 +182,33 @@ p{
     text-align: center;
 }
 
+.modal-content{
+    background-color: rgb(2, 73, 11);
+    width: 300px;
+    padding: 10%;
+    box-shadow: 0px 0px 10px rgb(2, 233, 2) ;
+
+
+}
+.form-control{
+    background-color: rgb(1, 58, 29);
+    box-shadow: 0px 0px 10px rgb(2, 233, 2) ;
+
+}
+.btn-outline-success{
+    box-shadow: 0px 0px 10px rgb(2, 233, 2) 
+
+}
+.titulo-login{
+    text-align: center;
+
+    text-shadow: 0px 0px 10px rgb(2, 233, 2) ;
+}
+.btn-outline-danger{
+    
+    box-shadow: 0px 0px 10px rgb(255, 0, 0) ;
+    
+}
+
     
 
