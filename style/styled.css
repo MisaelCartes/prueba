@@ -1,0 +1,214 @@
+body{
+    background-color: rgb(175, 175, 175);
+}
+title{
+    text-align: center;
+}
+#logo-pagina{
+    height: 70px;
+    width: 70px;    
+}
+
+#textos-barra{
+    text-align: 10%;
+}
+#barra-centrasl{
+    height: 100%;
+    
+}
+#barra-secundaria{
+    background-color:rgba(165, 57, 57, 0.938) ; 
+    padding-top: 10px;
+    border: 5px  ;
+    border-radius: 1px;
+    margin-bottom: 20px;
+}
+#demo{
+    padding-bottom: 10px;
+}
+
+nav ul {
+    /*El list-style-type es para eliminar los puntos de la lista*/
+    list-style-type: none;
+    
+}
+
+/*Hacer que cuando uno pase el mouse por el menu se vea una forma redondeada y con color*/
+nav li:hover{
+    background: rgb(30, 148, 15);
+    border-radius: 10px;
+}
+
+/*ajustar el submenu de forma que quede al centro*/
+#submenu {
+    padding-left: 0%;
+    padding-right: 0%;
+    text-align: center;
+}
+
+#img_obs{
+	height: 170px;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+
+.footer .social > a{
+    font-size: 24px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 100%;
+    border: 4px solid rgb(39, 139, 44);
+    margin: 20px 14px -4px;
+    color: inherit;
+}
+
+
+a{
+    text-decoration: underline;
+    color: #0d6efd;
+}
+
+a:hover{
+    
+    color: rgb(255, 255, 255);
+}
+
+.footer .social{
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+
+.footer{
+    padding: 4px 0px ;
+    background-color: rgb(255, 255, 255) ;
+    color: black ;
+    
+    
+}
+
+/*quitar el color de los links*/
+.items-menu{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+
+
+.footer .copyright{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 0;
+}
+
+p{
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+
+
+
+/*para hacer mas grandes las flechas*/
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    /*hacer un circulo en las flechas y de color coral*/
+    border-radius: 50%;
+    background-color: rgba(70, 236, 55, 0.527);
+}
+
+
+/*ajustar el tamaño de la imagen de las redes sociales*/
+#instagram{
+    width: 70%;
+    height: 70%;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+/*ajustar el tamaño de la imagen de las redes sociales*/
+#facebook{
+    width: 70%;
+    height: 70%;
+    margin-top: 10px;
+    margin-bottom: 60px; 
+}
+
+/*ajustar el tamaño de la imagen de las redes sociales*/
+#twitter{
+    width: 70%;
+    height: 70%;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+/*ajustar el tamaño de la imagen de las redes sociales*/
+#Whastsapp{
+    width: 70%;
+    height: 70%;
+    margin-top: 10px;
+    margin-bottom: 60px; 
+}
+
+/*ajustar el tamaño de la imagen de las redes sociales*/
+#telephone,#tel{
+    display: inline;
+    width:  20px;
+    height: 20px;
+    margin: auto;
+}
+
+
+#texto-principal{
+    text-align: center;
+    color: rgb(121, 64, 43);
+}
+#bajada{
+    margin-bottom: 10px;
+}
+
+#titulo-fundacion{
+    text-align: center;
+}
+
+.modal-content{
+    background-color: rgb(2, 73, 11);
+    width: 300px;
+    padding: 10%;
+    box-shadow: 0px 0px 10px rgb(2, 233, 2) ;
+
+
+}
+.form-control{
+    background-color: rgb(1, 58, 29);
+    box-shadow: 0px 0px 10px rgb(2, 233, 2) ;
+
+}
+.btn-outline-success{
+    box-shadow: 0px 0px 10px rgb(2, 233, 2) 
+
+}
+.titulo-login{
+    text-align: center;
+
+    text-shadow: 0px 0px 10px rgb(2, 233, 2) ;
+}
+.btn-outline-danger{
+    
+    box-shadow: 0px 0px 10px rgb(255, 0, 0) ;
+    
+}
+
+    
+
