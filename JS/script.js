@@ -24,7 +24,7 @@ function validarRegistro()
     {
         if(nombre.length>=4)
         {
-            if(correo.includes("@gmail")||correo.includes("@hotmail")||correo.includes("@outlook"))
+            if(correo.includes("@gmail")||correo.includes("@hotmail")||correo.includes("@outlook")||correo.includes("@GMAIL")||correo.includes("@HOTMAIL")||correo.includes("@OUTLOOK"))
             {
                 if(contra.length>=6)
                 {
