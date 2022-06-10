@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenLife</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="{% static 'core/css/style.css'%}">
+  <link rel="icon" href="{% static 'core/img/logoplanta.png'%}">
+
+
+</head>
+
+<body>
+  <!--Menu Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar" href="{% url 'home'%}">
+      <img src="{% static 'core/img/logoplanta.png'%}" alt="logoplanta" id="logo-pagina">
+    </a>
+    <div class="text-success" id="titulo-principal">
+      <h2>GreenLife</h2>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+      </span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-dark" href="{% url 'home'%}" id="textos-barra">Inicio
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Catalogo
+          </a>
+
+          <!--Submenu-->
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul id="submenu">
+            
+              <li><a href="{% url 'maceteros'%}" class="items-menu">Maceteros</a></li>
+              <li><a href="{% url 'insumos'%}" class="items-menu">Insumos</a></li>
+
+            </ul>
+          </div>
+
+        </li>
+      </ul>
+
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Que estas buscando?" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+      <a class="btn btn-outline-success" href="{% url 'paginalogin'%}" role="button">Iniciar sesion</a>
+      <a class="btn btn-outline-success" href="{% url 'perfil'%}" role="button">Perfil/Carrito</a>
+    </div>
+  </nav>
+  <!--CONTENEDOR DE TODA LA PAGINA-->
+  <div class="container" style="height: 100%;">
+    <div class="row">
+      <div class="col-sm-1" id="barra-izquierda">
+      </div>
+      <div class="col-sm-12" style="background-color:rgb(253, 253, 253) ;" id="barra-central">
+        <!--Carrusel responsivo-->
+        <br>
+
+
+        <!--columna col-12 para los productos-->
+        <div class="container col-12">
+          <div class="row">
+            <div class="listado col-12 text-center text-success">
+              <h1 id="titulo-productos">INSUMOS</h1>
+              <br />
+            </div>
+            <!--PRODUCTOS-->
+
+            <!--producto1-->
+            <div class="col-md-4">
+              <div class="card ">
+                <div class="card-body">
+                  <h5 class="card-title text-center">
+                    <img id="img_obs" src="{% static 'core/img/semillas1.jpg'%}">
+                  </h5>
+                  <p class="card-text"><label id="desayuno">Semilla Tagette</label><br>Marca: ANASAC<br>Cantidad Disp:
+                    10<br>
+                    Precio: $2000</p>
+                  <!--editar-->
+                  <p class="collapse" id="collapseExample">
+                    Planta anual, de fácil cultivo de flores dobles con un brillante color naranjo y de bajo
+                    crecimiento. Se utiliza principalmente como planta herbácea para macetas y jardineras.
+                  </p>
+                  <p class="card-text text-right">
+                    <!--editar-->
+                    <button type="button" class="btn btn-success" name="btnAgregar" id="btnAgregar">Agregar al carrito</button>
+                    <!--editar-->
+                    <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                      aria-controls="collapseExample" href="#" class="btn bt-success">Más >></a>
+                  </p>
+                </div>
+              </div>
+              <br>
+            </div>
+
+            <!--producto2-->
+            <div class="col-md-4">
+              <div class="card ">
+                <div class="card-body">
+                  <h5 class="card-title text-center">
+                    <img id="img_obs" src="{% static 'core/img/semillas2.jpg'%}">
+                  </h5>
+                  <p class="card-text"><label id="desayuno">Semilla reina margarita</label><br>Marca: anasac<br>Cantidad Disp:
+                    10<br>
+                    Precio: $2000</p>
+                  <!--editar-->
+                  <p class="collapse" id="collapseExample2">
+                    Planta herbácea anual, de grandes flores con variados colores que florecen en otoño. 
+                    De tallo alto, ideal para macetas y como flor cortada.
+                  </p>
+                  <p class="card-text text-right">
+                    <!--editar-->
+                    <button type="button" class="btn btn-success" name="btnAgregar" id="btnAgregar">Agregar al carrito</button>
+                    <!--editar-->
+                    <a data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false"
+                      aria-controls="collapseExample" href="#" class="btn bt-success">Más >></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--producto3-->
+            <div class="col-md-4">
+              <div class="card ">
+                <div class="card-body">
+                  <h5 class="card-title text-center">
+                    <img id="img_obs" src="{% static 'core/img/semillas3.jpg'%}">
+                  </h5>
+                  <p class="card-text"><label id="desayuno">Semilla Paquerette blanco Grande</label><br>Marca: anasac<br>Cantidad Disp:
+                    10<br>
+                    Precio: $2000</p>
+                  <!--editar-->
+                  <p class="collapse" id="collapseExample3">
+                    Planta perenne que florece al año siguiente de su siembra. 
+                    De grandes flores blancas de vara alta e ideal para usar en bordes de jardines y macizos florales.
+                  <p class="card-text text-right">
+                    <!--editar-->
+                    <button type="button" class="btn btn-success" name="btnAgregar" id="btnAgregar">Agregar al carrito</button>
+                    <!--editar-->
+                    <a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false"
+                      aria-controls="collapseExample" href="#" class="btn bt-success">Más >></a>
+                  </p>
+                </div>
+              </div>
+              <br>
+            </div>
+            <!--producto4-->
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-center">
+                    <img id="img_obs" src="{% static 'core/img/fertilizante.jpg'%}">
+                  </h5>
+                  <p class="card-text"><label id="desayuno">FERTI FRUTAS (10 KG)</label><br>Marca:
+                    anasac<br>Cantidad Disp: 10<br>
+                    Precio: $18.000</p>
+                  <p class="collapse" id="collapseExample4">
+                    Fertilizante granulado, importante para entregar una nutrición balanceada a árboles frutales. Este producto permite mantener un nivel nutricional óptimo que permita el desarrollo adecuado para que sean capaces de producir y soportar mayores cargas frutales en las distintas especies.
+                    Favorece el mayor desarrollo y firmeza de los frutos, acentuando la coloración, sabor y sanidad de ellos.
+                  </p>
+                  <p class="card-text text-right">
+                    <!--editar-->
+                    <button type="button" class="btn btn-success" name="btnAgregar" id="btnAgregar">Agregar al carrito</button>
+                    <!--editar-->
+                    <a data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false"
+                      aria-controls="collapseExample4" href="#" class="btn bt-success">Más >></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--producto5-->
+            <div class="col-md-4">
+              <div class="card ">
+                <div class="card-body">
+                  <h5 class="card-title text-center">
+                    <img id="img_obs" src="{% static 'core/img/glifosato.jpg'%}">
+                  </h5>
+                  <p class="card-text"><label id="desayuno">GLIFOSATO 48% SL (5LT)</label><br>Marca: Herbicix<br>Cantidad Disp:
+                    10<br>
+                    Precio: $69000</p>
+                  <!--editar-->
+                  <p class="collapse" id="collapseExample5">
+                    Es un herbicida no selectivo sistémico post-emergente, para el control de malezas anuales y perennes en frutales, vides, cultivos anuales trabajados en cero y/o mínima labranza, 
+                    barbechos químicos y preparación de áreas para plantación forestal
+                  </p>
+                  <p class="card-text text-right">
+                    <!--editar-->
+                    <button type="button" class="btn btn-success" name="btnAgregar" id="btnAgregar">Agregar al carrito</button>
+                    <!--editar-->
+                    <a data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false"
+                      aria-controls="collapseExample5" href="#" class="btn bt-success">Más >></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--producto6-->
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-center">
+                    <img id="img_obs" src="{% static 'core/img/arena.jpg'%}">
+                  </h5>
+                  <p class="card-text"><label id="desayuno">Arena Lampa(5KG)</label><br>Marca:
+                    anasac<br>Cantidad Disp: 20<br>
+                    Precio: $2800</p>
+                  <p class="collapse" id="collapseExample6">
+                    Mejorador de suelos 100%  natural que mejora el drenaje, estimulando el desarrollo radicular y promueve una mejor aireación del suelo. Disminuye la compactación de suelos, idealmente para uso en macetas y césped. 
+                    Producto homogéneo y de gran pureza, libre de insectos y agentes patógenos.
+                  </p>
+                  <p class="card-text text-right">
+                    <!--editar-->
+                    <button type="button" class="btn btn-success" name="btnAgregar" id="btnAgregar">Agregar al carrito</button>
+                    <!--editar-->
+                    <a data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false"
+                      aria-controls="collapseExample6" href="#" class="btn bt-success">Más >></a>
+                  </p>
+                </div>
+              </div>
+              <br>
+            </div>
+
+            <!--pie de pagina-->
+            <div class="col-sm-12" id="barra-secundaria">
+              <footer class="footer" id="bajada">
+                <div class="social">
+                  <div class="listado col-12 text-center text-dark">
+                    <h5 id="titulo-productos">Suscribete donando a nuestra fundacion y tendras un 5% de descuento en
+                      todos los productos!</h5>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <a class="btn btn-outline-success" href="{% url 'donaciones'%}" role="button">Donar</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </div>
+            <br>
+          </div>
+          <div class="col-sm-1" id="barra-derecha">
+          </div>
+        </div>
+      </div>
+</body>
+
+</html>
