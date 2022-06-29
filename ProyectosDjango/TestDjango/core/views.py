@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Carrito
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
 # Create your views here.
 
 def home(request):
@@ -30,14 +32,14 @@ def perfil(request):
     return render(request,'core/perfil.html', datos)
 
 def registro(request):
-    if request.method == 'POST':
-        form =UserCreationForm(request.POST)
+    if request.method =='POST':
+        form =UserCreationForm  (request.POST)
         if form.is_valid():
+            form.save()
             username = form.cleaned_data['username']
-            message.succes(request, f'Usuario {username} creado')
-    else:
-
-        form = UserCreationForm()
-
-    context ={ 'form' : form }
-    return render(request,'core/registro.html', context)
+            message.success(request,f'usuario{username}creado')
+            return redirect('core/home.html')
+        else:
+            form=UserCreationForm()
+        context = {'form'.form}
+    return render (request,'core/registro.html' )

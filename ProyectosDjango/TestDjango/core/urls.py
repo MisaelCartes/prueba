@@ -9,4 +9,5 @@ urlpatterns = [
     path ('paginalogin/',views.paginalogin, name="paginalogin"),
     path ('registro/',views.registro, name="registro"),
     path ('donaciones/',views.donaciones, name="donaciones"),
+    
 ]
