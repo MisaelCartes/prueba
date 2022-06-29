@@ -84,33 +84,42 @@
             <!--PRODUCTOS-->
 
             <!--producto1-->
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title text-center">
-                    <img id="img_obs" src="{% static 'core/img/maceta1.jpg'%}">
-                  </h5>
+            {% block content %}
+            {% for ca in Carritos %}
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">
+                      <img id="img_obs" src="{{ca.imagen.url}}">
+                    </h5>
 
-
-                  {% for ca in Carritos %}
-                  <h5 class="card-title">{{ca.nombreProducto}}</h5>
-                  <p class="card-text">{{ca.precio}}</p>
-                  <p class="card-text">{{ca.cantidad}}</p>
-                  </p>
-                  {% endfor %}
-
-
-                  <p class="card-text text-right">
+                    <p class="card-text"><label id="desayuno">{{ca.nombreProducto}}</label><br>Marca: ZARATE<br>Cantidad Disp:
+                      {{ca.cantidad}}<br>
+                      Precio: {{ca.precio}}</p>
                     <!--editar-->
-                    <button type="button" class="btn btn-success" name="btnAgregar" id="btnAgregar">Agregar al carrito</button>
-                    <!--editar-->
-                    <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                      aria-controls="collapseExample" href="#" class="btn bt-success">Más >></a>
-                  </p>
+                    <p class="collapse" id="collapseExample2">
+                      El Macetero ZARATE XL es perfecto para darle altura a arbustos o plantas medianas y grandes.
+                      <br>
+                      Diámetro: 52 cm; Altura: 90 cm.
+                    </p>
+                      
+                    </p>
+                    </p>
+
+
+
+                    <p class="card-text text-right">
+                      <!--editar-->
+                      <button type="button" class="btn btn-success" name="btnAgregar" id="btnAgregar">Agregar al carrito</button>
+                      <!--editar-->
+                      <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                        aria-controls="collapseExample" href="#" class="btn bt-success">Más >></a>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-
+            {% endfor %}
+            {% endblock %}  
             <!--producto2-->
             <div class="col-md-4">
               <div class="card ">

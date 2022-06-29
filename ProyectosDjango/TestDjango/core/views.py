@@ -14,12 +14,8 @@ def insumos(request):
 def maceteros(request):
         
     Carritos= Carrito.objects.all()
-
-    datos = {
-        'Carritos': Carritos
-    }
     
-    return render(request,'core/maceteros.html', datos)
+    return render(request,'core/maceteros.html',{'Carritos': Carritos})
 
 def paginalogin(request):
     return render(request,'core/paginalogin.html')
@@ -34,4 +30,14 @@ def perfil(request):
     return render(request,'core/perfil.html', datos)
 
 def registro(request):
-    return render(request,'core/registro.html')
+    if request.method == 'POST':
+        form =UserCreationForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            message.succes(request, f'Usuario {username} creado')
+    else:
+
+        form = UserCreationForm()
+
+    context ={ 'form' : form }
+    return render(request,'core/registro.html', context)
